@@ -1,0 +1,15 @@
+
+
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@layer base {
+    html{
+        @apply transition-colors
+    }
+    body{
+     
+         @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-white;
+    }
+}
+@plugin "daisyui"
+
