@@ -15,7 +15,9 @@ export const router = createBrowserRouter([
     element: <Root></Root>,
     errorElement:<h1>error</h1>,
      children:[
-        {path:'/',element:<Home></Home>},
+        {path:'/',
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
+          element:<Home></Home>},
         {
           path:"/signup",
           element:<SignUp></SignUp>
