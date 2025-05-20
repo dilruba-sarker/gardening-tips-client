@@ -7,7 +7,7 @@ const Gardeners = ({ gardenersres }) => {
 
   return (
     <div>
-      <h1>Data count: {data.length}</h1>
+      <h1 className='text-xl font-bold'>Total Active Garddeners: {data.length}</h1>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ml-16'>
         {data.map(item =>
@@ -22,7 +22,7 @@ const Gardeners = ({ gardenersres }) => {
   </figure>
   <div className="card-body items-center text-center">
 
-    <h1 key={item.name}
+    <h1 className='text-xl font-medium' key={item.name}
             >{item.name}</h1>
     <h1>{item.title}</h1>
     <div className="card-actions">

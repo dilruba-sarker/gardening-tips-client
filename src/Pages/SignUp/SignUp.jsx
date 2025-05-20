@@ -1,7 +1,8 @@
 import React, { use } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
-
+import Lottie from "lottie-react";
 import Swal from 'sweetalert2';
+import lottiee from "../../lottiee/Animation - 1746386920745.json"
 const SignUp = () => {
 const {createUser,updateUser,user,setUser,googleSignin}=use(AuthContext)
 
@@ -75,10 +76,11 @@ const handleGoogle=()=>{
     return (
         <div>
             <div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content flex-col">
+  <div className="hero-content flex-col lg:flex-row-reverse">
+    
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Signup now!</h1>
-      
+      <div className=''><Lottie  animationData={lottiee} loop={true} /></div>
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
