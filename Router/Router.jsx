@@ -11,6 +11,7 @@ import ExploreGardeners from "../src/Pages/ExploreGardeners/ExploreGardeners";
 import MyTips from "../src/Pages/MyTips/MyTips";
 import PrivateRoute from "../src/Private/PrivateRoute";
 import TipDetails from "../src/Pages/TipDetails/TipDetails";
+import BrowseTips from "../src/Pages/BrowseTips/BrowseTips";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -37,8 +38,17 @@ export const router = createBrowserRouter([
           path:'/mytips',
           element:<PrivateRoute><MyTips></MyTips></PrivateRoute>
         },{
-          path:'/details',
-          element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>
+
+          path:"/browswtips",
+          element:<BrowseTips></BrowseTips>,
+          loader:()=>fetch('http://localhost:3000/tips'),
+           hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
+
+        },{
+          path:'/details/:id',
+          element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>,
+          loader:({params})=>fetch(`http://localhost:3000/tips/${params.id}`),
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         }
      ]
   },

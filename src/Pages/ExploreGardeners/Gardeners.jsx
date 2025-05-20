@@ -13,7 +13,7 @@ const Gardeners = ({ gardenersres }) => {
         {data.map(item =>
           item.status === "active" ? (
 
-            <div className="card bg-green-300 w-72 shadow-sm">
+            <div key={item._id} className="card bg-green-300 w-72 shadow-sm">
   <figure className="px-10 pt-10">
     <img
       src={item.image}

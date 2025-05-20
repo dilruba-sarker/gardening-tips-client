@@ -122,6 +122,7 @@ const Navbar = () => {
         </>
       )}
       <li className='text-md font-semibold'><NavLink to="/gardeners">Explore Gardeners</NavLink></li>
+      <li className='text-md font-semibold'><NavLink to="/browswtips">Browse Tips</NavLink></li>
     </>
   );
 
