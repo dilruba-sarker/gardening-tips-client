@@ -9,6 +9,8 @@ import Login from "../src/Pages/Login/Login";
 import ShareAGardenTip from "../src/Pages/ShareAGardenTip/ShareAGardenTip";
 import ExploreGardeners from "../src/Pages/ExploreGardeners/ExploreGardeners";
 import MyTips from "../src/Pages/MyTips/MyTips";
+import PrivateRoute from "../src/Private/PrivateRoute";
+import TipDetails from "../src/Pages/TipDetails/TipDetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -26,14 +28,17 @@ export const router = createBrowserRouter([
           element:<Login></Login>
         },{
           path:"/ShareAGardenTip",
-          element:<ShareAGardenTip></ShareAGardenTip>
+          element:<PrivateRoute><ShareAGardenTip></ShareAGardenTip></PrivateRoute>
 
         },{
           path:"/gardeners",
           element:<ExploreGardeners></ExploreGardeners>
         },{
           path:'/mytips',
-          element:<MyTips></MyTips>
+          element:<PrivateRoute><MyTips></MyTips></PrivateRoute>
+        },{
+          path:'/details',
+          element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>
         }
      ]
   },

@@ -1,10 +1,12 @@
 import React, { use } from 'react';
 import { AuthContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 const Login = () => {
 const {signInUser, googleSignin}=use(AuthContext)
+  const navigate=useNavigate()
+    const location=useLocation()
 const handleSubmit=e=>{
      e.preventDefault()
 
@@ -19,13 +21,14 @@ const handleSubmit=e=>{
 
     signInUser(email,password)
         .then(res=>{
-          console.log(res.user);
+          
         
           Swal.fire({
       title: "Good job!",
       text: "login done sucessfully!!",
       icon: "success"
     });
+     setTimeout(()=>{navigate(`${location?.state?location?.state:"/"}`)},2000)
     form.reset('')
         }).catch(err=>{
           console.log(err.message);
@@ -45,7 +48,9 @@ const handleGoogle=()=>{
   title: "Good job!",
   text: "signup done sucessfully!!",
   icon: "success"
+  
 });
+  setTimeout(()=>{navigate(`${location?.state?location?.state:"/"}`)},2000)
   }).catch(err=>{
       Swal.fire({
   title: "Opps?",
