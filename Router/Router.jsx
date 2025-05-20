@@ -12,6 +12,7 @@ import MyTips from "../src/Pages/MyTips/MyTips";
 import PrivateRoute from "../src/Private/PrivateRoute";
 import TipDetails from "../src/Pages/TipDetails/TipDetails";
 import BrowseTips from "../src/Pages/BrowseTips/BrowseTips";
+import TopTrendingTips from "../src/Components/TopTrendingTips/TopTrendingTips";
 export const router = createBrowserRouter([
   {
     path: "/",

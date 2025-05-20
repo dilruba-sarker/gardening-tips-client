@@ -24,6 +24,7 @@ const {user}=use(AuthContext)
   const newUser={
     name:user.displayName,
     email:user.email,
+    totalLiked: 0,
     title, plantType, difficulty, description, images, category, availability
 
   }
