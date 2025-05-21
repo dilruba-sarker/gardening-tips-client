@@ -29,12 +29,12 @@ console.log("filter",filterData)
           {/* Table head */}
           <thead>
             <tr>
-              <th>Title</th>
+              <th className="text-xl text-blue-700">Title</th>
 
-              <th>Category</th>
-              <th>Image</th>
-              <th>difficulty</th>
-              <th>See More</th>
+              <th className="text-xl text-blue-700">Category</th>
+              <th className="text-xl text-blue-700">Image</th>
+              <th className="text-xl text-blue-700">difficulty</th>
+              <th className="text-xl text-blue-700">See More</th>
             </tr>
           </thead>
 

@@ -14,6 +14,7 @@ import TipDetails from "../src/Pages/TipDetails/TipDetails";
 import BrowseTips from "../src/Pages/BrowseTips/BrowseTips";
 import TopTrendingTips from "../src/Components/TopTrendingTips/TopTrendingTips";
 import ErrorPage from "../src/Pages/ErrorPage/ErrorPage";
+import UpdateTip from "../src/Pages/UpdatePage/UpdateTip";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +54,11 @@ export const router = createBrowserRouter([
           path:'/details/:id',
           element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>,
           loader:({params})=>fetch(`http://localhost:3000/tips/${params.id}`),
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
+        },{
+          path:"/update/:id",
+              element:<PrivateRoute><UpdateTip></UpdateTip></PrivateRoute>,
+              loader:({params})=>fetch(`http://localhost:3000/tips/${params.id}`),
           hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         }
      ]

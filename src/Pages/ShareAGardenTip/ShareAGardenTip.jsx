@@ -28,7 +28,7 @@ const {user}=use(AuthContext)
     title, plantType, difficulty, description, images, category, availability
 
   }
-console.log(newUser)
+
 
 fetch('http://localhost:3000/tips',{
   method:"POST",
@@ -46,7 +46,7 @@ fetch('http://localhost:3000/tips',{
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-green-300 min-h-screen">
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-2xl font-bold">Add Garden Tips now!</h1>
@@ -92,10 +92,10 @@ fetch('http://localhost:3000/tips',{
               </select>
 
               <label className="label">Email</label>
-              <input type="text" name="" value="email" readOnly className="input w-full" placeholder="Email" />
+              <input type="text" name="" value={user.email} readOnly className="input w-full" placeholder="Email" />
 
               <label className="label">Name</label>
-              <input type="text" value="name" readOnly className="input w-full" placeholder="Name" />
+              <input type="text" value={user.displayName} readOnly className="input w-full" placeholder="Name" />
 
               <div className="flex justify-center">
                 <button type="submit" className="btn btn-primary mt-4">Submit</button>
