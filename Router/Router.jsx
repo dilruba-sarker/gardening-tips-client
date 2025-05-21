@@ -13,11 +13,12 @@ import PrivateRoute from "../src/Private/PrivateRoute";
 import TipDetails from "../src/Pages/TipDetails/TipDetails";
 import BrowseTips from "../src/Pages/BrowseTips/BrowseTips";
 import TopTrendingTips from "../src/Components/TopTrendingTips/TopTrendingTips";
+import ErrorPage from "../src/Pages/ErrorPage/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<h1>error</h1>,
+    errorElement:<ErrorPage></ErrorPage>,
      children:[
         {path:'/',
           hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>,
@@ -34,10 +35,13 @@ export const router = createBrowserRouter([
 
         },{
           path:"/gardeners",
-          element:<ExploreGardeners></ExploreGardeners>
+          element:<ExploreGardeners></ExploreGardeners>,
+          loader:()=>fetch('http://localhost:3000/gardeners'),
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         },{
           path:'/mytips',
-          element:<PrivateRoute><MyTips></MyTips></PrivateRoute>
+          element:<PrivateRoute><MyTips></MyTips></PrivateRoute>,
+          
         },{
 
           path:"/browswtips",

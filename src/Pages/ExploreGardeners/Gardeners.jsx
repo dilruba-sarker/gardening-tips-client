@@ -1,16 +1,16 @@
 
 
-import React, { use } from 'react';
+// import React, { use } from 'react';
 
-const Gardeners = ({ gardenersres }) => {
-  const data = use(gardenersres); 
+const Gardeners = ({ gardeners }) => {
+  // const data = use(gardenersres); 
 
   return (
     <div>
-      <h1 className='text-xl font-bold'>Total Active Garddeners: {data.length}</h1>
+      <h1 className='text-xl font-bold'>Total Active Garddeners: {gardeners.length}</h1>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ml-16'>
-        {data.map(item =>
+        {gardeners.map(item =>
           item.status === "active" ? (
 
             <div key={item._id} className="card bg-green-300 w-72 shadow-sm">
