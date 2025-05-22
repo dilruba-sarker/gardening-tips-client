@@ -55,7 +55,7 @@ setMyTips(remainsData)
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center my-4">My Garden Tips</h2>
+      <h2 className="text-2xl font-bold text-center">My Garden Tips</h2>
  
       <div className="grid grid-cols-1 bg-green-300">
         {myTips.length > 0 ? (

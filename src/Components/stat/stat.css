@@ -1,0 +1,11 @@
+.stat {
+  background-image: 
+    linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), 
+    url(../../assets/5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  color: white;
+  margin-bottom: 10px;
+}

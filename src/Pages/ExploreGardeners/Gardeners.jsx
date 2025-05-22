@@ -6,14 +6,14 @@ const Gardeners = ({ gardeners }) => {
   // const data = use(gardenersres); 
 
   return (
-    <div>
-      <h1 className='text-xl font-bold'>Total Active Garddeners: {gardeners.length}</h1>
+    <div className="flex justify-center">
+     
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ml-16'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
         {gardeners.map(item =>
           item.status === "active" ? (
 
-            <div key={item._id} className="card bg-green-300 w-72 shadow-sm">
+            <div key={item._id} className="card bg-[#60db14] w-72 shadow-sm">
   <figure className="px-10 pt-10">
     <img
       src={item.image}
@@ -26,7 +26,7 @@ const Gardeners = ({ gardeners }) => {
             >{item.name}</h1>
     <h1>{item.title}</h1>
     <div className="card-actions">
-      <button className="btn btn-primary">{item.status}</button>
+      <button className="btn text-[#3a8c07] bg-white text-2xl font-bold ">{item.status}</button>
     </div>
   </div>
 </div>
