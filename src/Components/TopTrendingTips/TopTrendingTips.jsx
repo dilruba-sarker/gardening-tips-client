@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import ShowTrending from './ShowTrending';
 
 
-const data=fetch('http://localhost:3000/tips').then(res=>res.json())
+const data=fetch('https://assignment-10-11-server.vercel.app/tips').then(res=>res.json())
 
 const TopTrendingTips = () => {
     

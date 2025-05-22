@@ -30,7 +30,7 @@ const TipDetails = () => {
     setLike(newLike);
 
     // Send PATCH request to update like count
-    fetch(`http://localhost:3000/tips/${_id}`, {
+    fetch(`https://assignment-10-11-server.vercel.app/tips/${_id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

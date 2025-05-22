@@ -1,14 +1,14 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import Gardeners from '../../Pages/ExploreGardeners/Gardeners';
 import { motion } from "framer-motion";
-// const gardenersres=fetch('http://localhost:3000/garderners?limit=6').then(res=>res.json())
+// const gardenersres=fetch('https://assignment-10-11-server.vercel.app/garderners?limit=6').then(res=>res.json())
 
 
 
 const FeaturedGardeners = () => {
      const [gardeners, setGardeners] = useState([]);
       useEffect(() => {
-    fetch('http://localhost:3000/gardeners?limit=6') 
+    fetch('https://assignment-10-11-server.vercel.app/gardeners?limit=6') 
       .then(res => res.json())
       .then(data => {
         setGardeners(data);

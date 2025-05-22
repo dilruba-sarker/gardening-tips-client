@@ -4,7 +4,7 @@ A vibrant and inclusive platform for gardening lovers to share knowledge, ask pl
 
 ## 🔗 Live Site
 
-[https://your-live-site-url.com](https://your-live-site-url.com)
+[https://your-live-site-url.com](https://my-10-assignment-b-11.web.app/)
 
 ---
 

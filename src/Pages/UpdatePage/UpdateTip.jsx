@@ -36,7 +36,7 @@ const UpdateTip = () => {
 
   }
 
- fetch(`http://localhost:3000/tips/${_id}`,{
+ fetch(`https://assignment-10-11-server.vercel.app/tips/${_id}`,{
     method:"PUT",
       headers:{
   'content-type':"application/json"

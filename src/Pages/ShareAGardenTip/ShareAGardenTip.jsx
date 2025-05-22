@@ -30,7 +30,7 @@ const {user}=use(AuthContext)
   }
 
 
-fetch('http://localhost:3000/tips',{
+fetch('https://assignment-10-11-server.vercel.app/tips',{
   method:"POST",
   headers:{
     'content-type': 'application/json'

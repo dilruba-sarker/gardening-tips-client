@@ -11,7 +11,7 @@ const MyTips = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/tips?email=${user.email}`)
+      fetch(`https://assignment-10-11-server.vercel.app/tips?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => setMyTips(data));
     }
@@ -31,7 +31,7 @@ const handleDelete=(id)=>{
 }).then((result) => {
   if (result.isConfirmed) {
 
-  fetch(`http://localhost:3000/tips/${id}`,{
+  fetch(`https://assignment-10-11-server.vercel.app/tips/${id}`,{
     method:'DELETE'
   })
         .then((res) => res.json())
