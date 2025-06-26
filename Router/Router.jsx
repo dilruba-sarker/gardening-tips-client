@@ -17,6 +17,7 @@ import ErrorPage from "../src/Pages/ErrorPage/ErrorPage";
 import UpdateTip from "../src/Pages/UpdatePage/UpdateTip";
 import DashBoardLayout from "../src/Dashboard/DashBoardLayout";
 import DashboardOverview from "../src/Dashboard/DashboardOverview";
+import MyTrip from "../src/Dashboard/MyTrip";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
         path:'browswtips',
         element:<BrowseTips></BrowseTips>,
         loader:()=>fetch('https://assignment-10-11-server.vercel.app/tips'),
+      },{
+        path:'gardener',
+          loader:()=>fetch('https://assignment-10-11-server.vercel.app/gardeners'),
+        element:<MyTrip></MyTrip>,
       },
     ]
   }
