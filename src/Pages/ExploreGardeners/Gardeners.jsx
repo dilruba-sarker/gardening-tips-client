@@ -2,6 +2,8 @@
 
 // import React, { use } from 'react';
 
+import { Link } from "react-router";
+
 const Gardeners = ({ gardeners }) => {
   // const data = use(gardenersres); 
 
@@ -9,16 +11,16 @@ const Gardeners = ({ gardeners }) => {
     <div className="flex justify-center">
      
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3'>
         {gardeners.map(item =>
           item.status === "active" ? (
 
-            <div key={item._id} className="card bg-[#60db14] w-72 shadow-sm">
-  <figure className="px-10 pt-10">
+            <div key={item._id} className="card bg-[#60db14] w-60 h-64 shadow-sm">
+  <figure className="mt-2">
     <img
       src={item.image}
-      alt="Shoes"
-      className="rounded-xl" />
+      alt="gargeners"
+      className=" w-56 mt-2 h-60 px-4 py-16 rounded-b-lg " />
   </figure>
   <div className="card-body items-center text-center">
 
@@ -26,7 +28,8 @@ const Gardeners = ({ gardeners }) => {
             >{item.name}</h1>
     <h1>{item.title}</h1>
     <div className="card-actions">
-      <button className="btn text-[#3a8c07] bg-white text-2xl font-bold ">{item.status}</button>
+      <Link to="/gardeners">
+      <button className="btn text-[#3a8c07] bg-white text-2xl font-bold ">{item.status}</button></Link>
     </div>
   </div>
 </div>

@@ -17,14 +17,14 @@ const FeaturedGardeners = () => {
   }, []);
     
     return (
-        <div className=' text-center mt-4 mb-4'>
+        <div className=' text-center py-3.5  bg-green-200 mb-4'>
            
 <motion.div 
 
 
  animate={{ x: 0 }}
   transition={{ ease: "easeOut", duration: 10 }}>
- <h1 className='text-2xl font-bold text-green-600 overflow-x-hidden'>All Active gardenersres</h1>
+ <h1 className='text-2xl m-4 font-bold text-green-600 overflow-x-hidden'>All Active gardenersres</h1>
 </motion.div>
             <Gardeners gardeners={gardeners}></Gardeners>
            

@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../assets/Spring.png";
 import { motion } from "motion/react"
+import { Link } from "react-router";
 const Newsletter = () => {
   return (
     <div
@@ -37,7 +38,7 @@ const Newsletter = () => {
               </div>
             </fieldset>
           </form>
-
+<Link to="/browswtips">
           <motion.button className="text-white mt-6 ml-8 font-bold bg-amber-400 px-2 rounded-2xl"
   initial={{ opacity: 1 }}
 animate={{
@@ -46,7 +47,7 @@ animate={{
   }}
 
 
-> Click Me </motion.button>
+> Click Me </motion.button></Link>
         </div>
       </div>
     </div>

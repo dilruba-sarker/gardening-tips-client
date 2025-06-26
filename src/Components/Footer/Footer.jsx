@@ -101,7 +101,7 @@ const Footer = () => {
   </nav>
    
 </footer>
-   <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+   <p className='text-white'>Copyright © {new Date().getFullYear()} - All right reserved</p>
 </div>
     );
 };
