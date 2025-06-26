@@ -52,10 +52,10 @@ setMyTips(remainsData)
   }
 });
 }
-
+console.log("my tips",)
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center">My Garden Tips</h2>
+      <h2 className="text-2xl font-bold text-center">My Garden Tips:{myTips.length}</h2>
  
       <div className="grid grid-cols-1 bg-green-300">
         {myTips.length > 0 ? (

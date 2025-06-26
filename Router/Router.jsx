@@ -15,6 +15,8 @@ import BrowseTips from "../src/Pages/BrowseTips/BrowseTips";
 import TopTrendingTips from "../src/Components/TopTrendingTips/TopTrendingTips";
 import ErrorPage from "../src/Pages/ErrorPage/ErrorPage";
 import UpdateTip from "../src/Pages/UpdatePage/UpdateTip";
+import DashBoardLayout from "../src/Dashboard/DashBoardLayout";
+import DashboardOverview from "../src/Dashboard/DashboardOverview";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -62,5 +64,25 @@ export const router = createBrowserRouter([
           hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         }
      ]
-  },
+  },{
+    path:'/dashboard',
+    element:<PrivateRoute><DashBoardLayout></DashBoardLayout></PrivateRoute>,
+    children:[
+      {
+      index: true, // Default route under /dashboard
+      element: <DashboardOverview />,
+        loader: () => fetch('https://assignment-10-11-server.vercel.app/tips'),
+    },
+      {
+        path:'mytips',
+        element:<MyTips></MyTips>
+        
+      },
+      {
+        path:'browswtips',
+        element:<BrowseTips></BrowseTips>,
+        loader:()=>fetch('https://assignment-10-11-server.vercel.app/tips'),
+      },
+    ]
+  }
 ]);

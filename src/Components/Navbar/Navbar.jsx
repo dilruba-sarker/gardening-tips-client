@@ -18,6 +18,7 @@ const Navbar = () => {
         <>
           <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/mytips">My Tips</NavLink></li>
           <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/ShareAGardenTip">Share a Garden Tip</NavLink></li>
+          <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>
       )}
       <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/gardeners">Explore Gardeners</NavLink></li>
