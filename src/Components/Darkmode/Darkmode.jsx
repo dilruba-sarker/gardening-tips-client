@@ -23,7 +23,7 @@ const toggleTheme=()=>{
       <button 
       onClick={toggleTheme}
       aria-level={`switch to ${theme==='dark'?'light':'dark'}mode`}
-      className='absolute top-6  rounded-full bg-amber-50 dark:bg-gray-950 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors'
+      className='absolute top-12  rounded-full bg-amber-50 dark:bg-gray-950 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors'
       >
 
 

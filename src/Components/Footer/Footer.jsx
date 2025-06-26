@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
-
+import logo from '../../assets/Borcelle Organic (50 x 50 px) (1).png'
 const Footer = () => {
     return (
 <div className='bg-gray-800 max-w-5xl mx-auto text-center mt-4'>
 
        <footer className="footer sm:footer-horizontal  text-base-content p-10">
+        <div>
+          <img className='rounded-4xl' src={logo} alt="" />
+        </div>
   <nav>
     <h6 className=" text-[#4aba0d] text-xl font-bold">Contact info</h6>
     <a className="link link-hover text-[#4aba0d]">Dhaka,Kazi Nazrul Road</a>
@@ -16,10 +19,43 @@ const Footer = () => {
   </nav>
   <nav>
     <h6 className=" text-[#4aba0d] text-xl font-bold">Terms </h6>
-    <a className="link link-hover text-[#4aba0d]">Online tips and guides</a>
-    <a className="link link-hover text-[#4aba0d]">Garden design and landscaping</a>
-    <a className="link link-hover text-[#4aba0d]">Plant maintenance and care</a>
-    <a className="link link-hover text-[#4aba0d]">Gardening consultations</a>
+
+    <a
+  href="https://miraclegro.com/en-us/gardening-101/10-top-gardening-tips-for-beginners.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="link link-hover text-[#4aba0d]"
+>
+  Online tips and guides
+</a>
+
+    <a
+  href="https://gardendesignlandscaping.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="link link-hover text-[#4aba0d]"
+>
+  Garden design and landscaping
+</a>
+
+ <a
+  href="https://www.thesill.com/blogs/plants-101/top-ten-plant-care-tips"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="link link-hover text-[#4aba0d]"
+>
+  Plant maintenance and care
+</a>
+
+   <a
+  href="https://www.growing-gardens.org/garden-consultations"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="link link-hover text-[#4aba0d]"
+>
+  Gardening consultations
+</a>
+
   </nav>
   <nav>
     <h6 className="text-[#4aba0d]  text-xl font-bold">Social</h6>

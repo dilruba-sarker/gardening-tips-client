@@ -13,15 +13,15 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className='text-xl font-semibold hover:bg-green-400 hover:text-white text-green-500'><NavLink to="/">Home</NavLink></li>
+      <li className='text-md font-semibold hover:bg-green-400 hover:text-white text-green-500'><NavLink to="/">Home</NavLink></li>
       {user?.email && (
         <>
-          <li className='text-xl text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/mytips">My Tips</NavLink></li>
-          <li className='text-xl text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/ShareAGardenTip">Share a Garden Tip</NavLink></li>
+          <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/mytips">My Tips</NavLink></li>
+          <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/ShareAGardenTip">Share a Garden Tip</NavLink></li>
         </>
       )}
-      <li className='text-xl text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/gardeners">Explore Gardeners</NavLink></li>
-      <li className='text-xl text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/browswtips">Browse Tips</NavLink></li>
+      <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/gardeners">Explore Gardeners</NavLink></li>
+      <li className='text-md text-green-500  hover:bg-green-400 hover:text-white font-semibold'><NavLink to="/browswtips">Browse Tips</NavLink></li>
     </>
   );
 
