@@ -35,7 +35,7 @@ const DashboardOverview = () => {
   <div className="card-body">
     <h2 className="card-title">Logged In user</h2>
        <div className='flex gap-4'>
-        <img className='rounded-full w-16' src={user.photoURL} alt="" />
+        <img className='rounded-full bg-green-500 w-16' src={user.photoURL} alt="" />
         <div> <h1 className='text-xl font-bold'>{user.displayName}</h1>
      <h1>{user.email}</h1></div>
         </div>
