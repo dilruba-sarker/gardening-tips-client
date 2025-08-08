@@ -1,6 +1,8 @@
 # 🌱 GreenCircle - Gardening Community & Resource Hub
 
-A vibrant and inclusive platform for gardening lovers to share knowledge, ask plant care questions, connect with local enthusiasts, and join green events. Whether you're into composting, hydroponics, or just sprucing up your balcony garden — GreenCircle is your digital gardening home.
+A vibrant and inclusive platform for gardening lovers to share knowledge, ask plant care questions, connect with local enthusiasts, and join green events. Whether you're into composting, hydroponics, or just sprucing up your balcony garden — GreenCircle is your digital gardening home .
+
+asjaksajsja
 
 ## 🔗 Live Site
 
